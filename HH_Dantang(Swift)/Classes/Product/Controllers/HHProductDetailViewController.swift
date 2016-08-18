@@ -10,6 +10,7 @@ import UIKit
 
 class HHProductDetailViewController: HHBaseViewController {
     
+    var product: HHProductModel!
     var tableView:UITableView!
     var isTopIsCanNotMoveTabView = false
     var isTopIsCanNotMoveTabViewPre = false
@@ -23,7 +24,7 @@ class HHProductDetailViewController: HHBaseViewController {
         navigationItem.title = "商品详情";
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
-        
+        print(product!.url)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HHProductDetailViewController.acceptMsg(_:)), name:kLeaveTopNotificationName, object: nil)
     }
 
@@ -35,7 +36,7 @@ class HHProductDetailViewController: HHBaseViewController {
         tableView.delegate = self
         tableView.showsVerticalScrollIndicator = false
         view.addSubview(tableView)
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.registerClass(HHProductDetailTopCell.self, forCellReuseIdentifier: "cell")
     }
 
     func acceptMsg(notification: NSNotification) {
@@ -65,7 +66,7 @@ extension HHProductDetailViewController:UITableViewDataSource,UITableViewDelegat
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         var cellHeight:CGFloat = 0.0
         if indexPath.section == 0 {
-            cellHeight = 164
+            cellHeight = 450
         }else if indexPath.section == 1 {
             cellHeight = self.view.frame.height-CGFloat(kBottomBarHeight);
         }
@@ -77,21 +78,23 @@ extension HHProductDetailViewController:UITableViewDataSource,UITableViewDelegat
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         
         if indexPath.section == 0 {
-            let textlabel = UILabel(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 164))
-            textlabel.text = "价格区";
-            textlabel.backgroundColor = UIColor.cyanColor()
-            textlabel.textAlignment = NSTextAlignment.Center
-            cell?.contentView.addSubview(textlabel)
-            
-
-        }else if indexPath.section == 1 {
+//            let textlabel = UILabel(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 164))
+//            textlabel.text = "价格区";
+//            textlabel.backgroundColor = UIColor.cyanColor()
+//            textlabel.textAlignment = NSTextAlignment.Center
+//            cell?.contentView.addSubview(textlabel)
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! HHProductDetailTopCell
+            cell.product = self.product
+            return cell
+        }else  {
             //CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomBarHeight-64);
             let picAndCommentView = HHPicDetailAndCommentView(frame: CGRectMake(0, 0, KSCREENWIDTH, KSCREENHEIGHT - CGFloat(kBottomBarHeight) ))
-
+            picAndCommentView.product = self.product
             cell?.contentView.addSubview(picAndCommentView)
 
+            return cell!
         }
-        return cell!
+        
     }
     
     func click(){

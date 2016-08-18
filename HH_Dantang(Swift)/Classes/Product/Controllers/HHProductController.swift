@@ -62,6 +62,7 @@ extension HHProductController:UICollectionViewDataSource,UICollectionViewDelegat
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 
         let productDetailVC = HHProductDetailViewController()
+        productDetailVC.product = products[indexPath.item]
         navigationController?.pushViewController(productDetailVC, animated: true)
     }
 }

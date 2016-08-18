@@ -10,6 +10,16 @@ import UIKit
 
 class HHPicDetailAndCommentView: UIView {
 
+    var product: HHProductModel? {
+        didSet {
+
+            let url = NSURL(string: (product?.url)!)
+            let request = NSURLRequest(URL: url!)
+            webView.loadRequest(request)
+
+        }
+    }
+
     var tabTitleView : UIView!
     var tabContentView : UITableView!
     var webView : UIWebView!
@@ -36,24 +46,26 @@ class HHPicDetailAndCommentView: UIView {
     func setupUI() {
         tabTitleView = UIView()
         tabTitleView.frame = CGRectMake(0, 0, KSCREENWIDTH, kTabTitleViewHeight)
-        tabTitleView.backgroundColor = UIColor.redColor()
+        tabTitleView.backgroundColor = UIColor.whiteColor()
         self.addSubview(tabTitleView)
         
         let picDetailBtn = UIButton(type: UIButtonType.Custom)
         picDetailBtn.setTitle("图文详情", forState: UIControlState.Normal)
+        picDetailBtn.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         picDetailBtn.frame = CGRectMake(0, 0, KSCREENWIDTH/2, kTabTitleViewHeight);
         picDetailBtn.addTarget(self, action: #selector(HHPicDetailAndCommentView.clickPicDetail), forControlEvents: UIControlEvents.TouchUpInside)
         tabTitleView.addSubview(picDetailBtn)
 
         let commentBtn = UIButton(type: UIButtonType.Custom)
         commentBtn.setTitle("评价", forState: UIControlState.Normal)
+        commentBtn.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         commentBtn.frame = CGRectMake(KSCREENWIDTH/2, 0, KSCREENWIDTH/2, kTabTitleViewHeight);
         commentBtn.addTarget(self, action: #selector(HHPicDetailAndCommentView.clickComment), forControlEvents: UIControlEvents.TouchUpInside)
         tabTitleView.addSubview(commentBtn)
         
         //评论视图
         tabContentView = UITableView(frame: CGRectMake(0, CGRectGetMaxY(tabTitleView.frame), KSCREENWIDTH, self.height - tabTitleView.height), style: UITableViewStyle.Plain)
-        tabContentView.backgroundColor = UIColor.greenColor()
+        tabContentView.backgroundColor = UIColor.whiteColor()
         tabContentView.dataSource = self
         tabContentView.delegate = self
         tabContentView.hidden = true
@@ -61,27 +73,24 @@ class HHPicDetailAndCommentView: UIView {
         tabContentView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //图文详情
-//        webView = UIWebView(frame: CGRectMake(0, CGRectGetMaxY(tabTitleView.frame), KSCREENWIDTH, CGRectGetHeight(self.frame) - CGRectGetHeight(tabTitleView.frame)))
-//        webView.backgroundColor = UIColor.redColor()
-//        webView.scrollView.delegate = self;
-//        self.addSubview(webView)
-//        let url = NSURL(string: "http://www.jianshu.com/p/38f0b7eef959")
-//        let request = NSURLRequest(URL: url!)
-//        webView.loadRequest(request)
+        webView = UIWebView(frame: CGRectMake(0, CGRectGetMaxY(tabTitleView.frame), KSCREENWIDTH, CGRectGetHeight(self.frame) - CGRectGetHeight(tabTitleView.frame)))
+        webView.scrollView.delegate = self;
+        webView.backgroundColor = UIColor.whiteColor()
+        self.addSubview(webView)
+        
         
 
         
     }
     
     func clickPicDetail() {
-     print("点击了图文详情")
-//        webView.hidden = false
+     
+        webView.hidden = false
         tabContentView.hidden = true
     }
     
     func clickComment() {
-        print("点击了评价")
-//        webView.hidden = true
+        webView.hidden = true
         tabContentView.hidden = false
 
     }
@@ -116,18 +125,15 @@ extension HHPicDetailAndCommentView:UITableViewDelegate,UITableViewDataSource{
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-//        print("下方tableview")
-//        print("____\(canScroll)")
+
         if !canScroll {
             scrollView.contentOffset = CGPointZero
-            print("canScroll__\(canScroll)")
         }
         
         let offsetY = scrollView.contentOffset.y
         
         if offsetY < 0 {
             NSNotificationCenter.defaultCenter().postNotificationName(kLeaveTopNotificationName, object: nil, userInfo: ["canScroll":"1"])
-
         }
         
     }

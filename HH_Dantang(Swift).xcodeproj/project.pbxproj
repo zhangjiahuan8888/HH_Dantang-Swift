@@ -54,6 +54,7 @@
 		0C917B711D5B289E00AE62DB /* HHBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C917B701D5B289E00AE62DB /* HHBannerModel.swift */; };
 		0C917B731D5B347000AE62DB /* HHHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C917B721D5B347000AE62DB /* HHHomeItem.swift */; };
 		0C96895D1D62E3770089A1CE /* HHDantangDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96895C1D62E3770089A1CE /* HHDantangDetailViewController.swift */; };
+		0CAA2BC01D65B1930091E047 /* HHProductDetailTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAA2BBF1D65B1930091E047 /* HHProductDetailTopCell.swift */; };
 		69B7AAD6689B4810A336C98D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7956724C578E6CE1491CD1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		0C917B701D5B289E00AE62DB /* HHBannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHBannerModel.swift; sourceTree = "<group>"; };
 		0C917B721D5B347000AE62DB /* HHHomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHHomeItem.swift; sourceTree = "<group>"; };
 		0C96895C1D62E3770089A1CE /* HHDantangDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHDantangDetailViewController.swift; sourceTree = "<group>"; };
+		0CAA2BBF1D65B1930091E047 /* HHProductDetailTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHProductDetailTopCell.swift; sourceTree = "<group>"; };
 		3F0EEEC3DE071D7E33ADE654 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B7956724C578E6CE1491CD1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7483EC2C201B51D2037D03EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 				0C88B8241D545C4500B9DA08 /* HHProductCell.swift */,
 				0C3972481D6452FD00FEB5BD /* HHTableView.swift */,
 				0C39724A1D645F7900FEB5BD /* HHPicDetailAndCommentView.swift */,
+				0CAA2BBF1D65B1930091E047 /* HHProductDetailTopCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				0C394ECB1D59D60B007AA84A /* UIImageView+HighlightedWebCache.m in Sources */,
 				0C88B81A1D543D8B00B9DA08 /* HHClassifyController.swift in Sources */,
 				0C394EC21D59D60B007AA84A /* SDWebImageDecoder.m in Sources */,
+				0CAA2BC01D65B1930091E047 /* HHProductDetailTopCell.swift in Sources */,
 				0C394EBF1D59D60B007AA84A /* NSData+ImageContentType.m in Sources */,
 				0C88B8221D54565100B9DA08 /* HHCommon.swift in Sources */,
 				0C88B82D1D54976200B9DA08 /* HHNetWorkTool.swift in Sources */,
