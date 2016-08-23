@@ -26,8 +26,10 @@
 		0C394ECD1D59D60B007AA84A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C394EBD1D59D60B007AA84A /* UIView+WebCacheOperation.m */; };
 		0C3972491D6452FD00FEB5BD /* HHTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3972481D6452FD00FEB5BD /* HHTableView.swift */; };
 		0C39724B1D645F7900FEB5BD /* HHPicDetailAndCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39724A1D645F7900FEB5BD /* HHPicDetailAndCommentView.swift */; };
+		0C5130681D6BE336000E7DBA /* HHMeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5130671D6BE336000E7DBA /* HHMeFooterView.swift */; };
 		0C648E101D5C5DF1001A8F4E /* HHHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C648E0F1D5C5DF1001A8F4E /* HHHomeHeaderView.swift */; };
 		0C648E161D5C7751001A8F4E /* NSDate+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C648E151D5C7751001A8F4E /* NSDate+Category.swift */; };
+		0C6D84FC1D66D0330059B8DA /* HHScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D84FB1D66D0330059B8DA /* HHScrollView.swift */; };
 		0C722BDB1D5815B300DCEAD0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C722BDA1D5815B300DCEAD0 /* UIView+Extension.swift */; };
 		0C722BDD1D5816E800DCEAD0 /* DantangChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C722BDC1D5816E800DCEAD0 /* DantangChoiceViewController.swift */; };
 		0C722BDF1D58173E00DCEAD0 /* DantangClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C722BDE1D58173E00DCEAD0 /* DantangClassifyViewController.swift */; };
@@ -54,6 +56,10 @@
 		0C917B711D5B289E00AE62DB /* HHBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C917B701D5B289E00AE62DB /* HHBannerModel.swift */; };
 		0C917B731D5B347000AE62DB /* HHHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C917B721D5B347000AE62DB /* HHHomeItem.swift */; };
 		0C96895D1D62E3770089A1CE /* HHDantangDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96895C1D62E3770089A1CE /* HHDantangDetailViewController.swift */; };
+		0C96EBEB1D6A9E7400DF6013 /* HHProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96EBEA1D6A9E7400DF6013 /* HHProductDetailModel.swift */; };
+		0C96EBED1D6AC56900DF6013 /* HHCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96EBEC1D6AC56900DF6013 /* HHCommentCell.swift */; };
+		0C96EBEF1D6AD3C900DF6013 /* HHProductCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96EBEE1D6AD3C900DF6013 /* HHProductCommentModel.swift */; };
+		0C96EBF11D6AE97400DF6013 /* HHMeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96EBF01D6AE97400DF6013 /* HHMeHeaderView.swift */; };
 		0CAA2BC01D65B1930091E047 /* HHProductDetailTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAA2BBF1D65B1930091E047 /* HHProductDetailTopCell.swift */; };
 		69B7AAD6689B4810A336C98D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7956724C578E6CE1491CD1 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -97,8 +103,10 @@
 		0C394EBD1D59D60B007AA84A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		0C3972481D6452FD00FEB5BD /* HHTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHTableView.swift; sourceTree = "<group>"; };
 		0C39724A1D645F7900FEB5BD /* HHPicDetailAndCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHPicDetailAndCommentView.swift; sourceTree = "<group>"; };
+		0C5130671D6BE336000E7DBA /* HHMeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHMeFooterView.swift; sourceTree = "<group>"; };
 		0C648E0F1D5C5DF1001A8F4E /* HHHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHHomeHeaderView.swift; sourceTree = "<group>"; };
 		0C648E151D5C7751001A8F4E /* NSDate+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Category.swift"; sourceTree = "<group>"; };
+		0C6D84FB1D66D0330059B8DA /* HHScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHScrollView.swift; sourceTree = "<group>"; };
 		0C722BDA1D5815B300DCEAD0 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		0C722BDC1D5816E800DCEAD0 /* DantangChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DantangChoiceViewController.swift; sourceTree = "<group>"; };
 		0C722BDE1D58173E00DCEAD0 /* DantangClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DantangClassifyViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +135,10 @@
 		0C917B701D5B289E00AE62DB /* HHBannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHBannerModel.swift; sourceTree = "<group>"; };
 		0C917B721D5B347000AE62DB /* HHHomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHHomeItem.swift; sourceTree = "<group>"; };
 		0C96895C1D62E3770089A1CE /* HHDantangDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHDantangDetailViewController.swift; sourceTree = "<group>"; };
+		0C96EBEA1D6A9E7400DF6013 /* HHProductDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHProductDetailModel.swift; sourceTree = "<group>"; };
+		0C96EBEC1D6AC56900DF6013 /* HHCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHCommentCell.swift; sourceTree = "<group>"; };
+		0C96EBEE1D6AD3C900DF6013 /* HHProductCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHProductCommentModel.swift; sourceTree = "<group>"; };
+		0C96EBF01D6AE97400DF6013 /* HHMeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHMeHeaderView.swift; sourceTree = "<group>"; };
 		0CAA2BBF1D65B1930091E047 /* HHProductDetailTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHProductDetailTopCell.swift; sourceTree = "<group>"; };
 		3F0EEEC3DE071D7E33ADE654 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B7956724C578E6CE1491CD1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +361,7 @@
 				0C394E981D59D428007AA84A /* HHBannerView.h */,
 				0C394E991D59D428007AA84A /* HHBannerView.m */,
 				0C394E971D59D427007AA84A /* HH_Dantang(Swift)-Bridging-Header.h */,
+				0C6D84FB1D66D0330059B8DA /* HHScrollView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -381,6 +394,8 @@
 		0C88B80A1D543B6500B9DA08 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C96EBF01D6AE97400DF6013 /* HHMeHeaderView.swift */,
+				0C5130671D6BE336000E7DBA /* HHMeFooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				0C88B82A1D547EA800B9DA08 /* HHProductModel.swift */,
+				0C96EBEA1D6A9E7400DF6013 /* HHProductDetailModel.swift */,
+				0C96EBEE1D6AD3C900DF6013 /* HHProductCommentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -418,6 +435,7 @@
 				0C88B8241D545C4500B9DA08 /* HHProductCell.swift */,
 				0C3972481D6452FD00FEB5BD /* HHTableView.swift */,
 				0C39724A1D645F7900FEB5BD /* HHPicDetailAndCommentView.swift */,
+				0C96EBEC1D6AC56900DF6013 /* HHCommentCell.swift */,
 				0CAA2BBF1D65B1930091E047 /* HHProductDetailTopCell.swift */,
 			);
 			path = Views;
@@ -563,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3972491D6452FD00FEB5BD /* HHTableView.swift in Sources */,
+				0C96EBED1D6AC56900DF6013 /* HHCommentCell.swift in Sources */,
 				0C88B8121D543CCF00B9DA08 /* HHNavigationController.swift in Sources */,
 				0C394EC61D59D60B007AA84A /* SDWebImagePrefetcher.m in Sources */,
 				0C88B7E91D5439FE00B9DA08 /* AppDelegate.swift in Sources */,
@@ -581,16 +600,20 @@
 				0C648E161D5C7751001A8F4E /* NSDate+Category.swift in Sources */,
 				0C394EC01D59D60B007AA84A /* SDImageCache.m in Sources */,
 				0C88B81C1D543D9900B9DA08 /* HHMeViewController.swift in Sources */,
+				0C6D84FC1D66D0330059B8DA /* HHScrollView.swift in Sources */,
 				0C88B8271D545E4E00B9DA08 /* HHDanTangCell.swift in Sources */,
 				0C394EC51D59D60B007AA84A /* SDWebImageManager.m in Sources */,
 				0C917B731D5B347000AE62DB /* HHHomeItem.swift in Sources */,
 				0C394ECD1D59D60B007AA84A /* UIView+WebCacheOperation.m in Sources */,
 				0C39724B1D645F7900FEB5BD /* HHPicDetailAndCommentView.swift in Sources */,
 				0C722BE31D58697C00DCEAD0 /* HHDantangChoiceCell.swift in Sources */,
+				0C96EBEF1D6AD3C900DF6013 /* HHProductCommentModel.swift in Sources */,
 				0C722BDF1D58173E00DCEAD0 /* DantangClassifyViewController.swift in Sources */,
+				0C96EBF11D6AE97400DF6013 /* HHMeHeaderView.swift in Sources */,
 				0C722BDB1D5815B300DCEAD0 /* UIView+Extension.swift in Sources */,
 				0C917B6D1D5B05B000AE62DB /* HHProductDetailViewController.swift in Sources */,
 				0C394EC31D59D60B007AA84A /* SDWebImageDownloader.m in Sources */,
+				0C96EBEB1D6A9E7400DF6013 /* HHProductDetailModel.swift in Sources */,
 				0C394EC81D59D60B007AA84A /* UIImage+GIF.m in Sources */,
 				0C88B8181D543D7800B9DA08 /* HHProductController.swift in Sources */,
 				0C88B8251D545C4500B9DA08 /* HHProductCell.swift in Sources */,
@@ -600,6 +623,7 @@
 				0C394E9A1D59D428007AA84A /* HHBannerView.m in Sources */,
 				0C96895D1D62E3770089A1CE /* HHDantangDetailViewController.swift in Sources */,
 				0C394EC91D59D60B007AA84A /* UIImage+MultiFormat.m in Sources */,
+				0C5130681D6BE336000E7DBA /* HHMeFooterView.swift in Sources */,
 				0C88B82B1D547EA800B9DA08 /* HHProductModel.swift in Sources */,
 				0C394EC11D59D60B007AA84A /* SDWebImageCompat.m in Sources */,
 				0C88B8101D543C6E00B9DA08 /* HHTabbarController.swift in Sources */,

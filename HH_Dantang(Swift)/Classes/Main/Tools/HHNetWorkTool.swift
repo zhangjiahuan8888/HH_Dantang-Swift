@@ -169,7 +169,50 @@ class HHNetWorkTool: NSObject {
                 }
             }
         }
-    
-    
     }
+    
+    //获取单品详情数据（根据商品的id获取商品详情的web页面url）
+    func loadProductDetailData(id: Int, finished:(productDetail: HHProductDetailModel) -> ()) {
+        let url = BASE_URL + "v2/items/\(id)"
+        Alamofire.request(.GET, url).responseJSON { (response) in
+            
+            if let value = response.result.value{
+                let dict = JSON(value)
+                if let data = dict["data"].dictionaryObject{
+                
+                let productDetail = HHProductDetailModel(dict: data)
+                finished(productDetail: productDetail)
+                }
+            }
+        }
+    }
+    
+    //获取单品详情评论
+    func loadProductDetailCommmentData(id: Int, finished:(comments: [HHProductCommentModel])-> ()) {
+        let url = BASE_URL + "v2/items/\(id)/comments"
+        let params = ["limit": 20,
+                      "offset": 0]
+        
+        Alamofire.request(.GET, url, parameters: params).responseJSON { (response) in
+            
+            if let value = response.result.value{
+                let dict = JSON(value)
+                if let data = dict["data"].dictionary{
+                    if let commentsData = data["comments"]?.arrayObject{
+                        var comments = [HHProductCommentModel]()
+                        
+                        for item in commentsData{
+                            let comment = HHProductCommentModel(dict: item as! [String: AnyObject])
+                            comments.append(comment)
+                        }
+                        finished(comments: comments)
+                    }
+                }
+            }
+        }
+    }
+
+    
+    
 }
+

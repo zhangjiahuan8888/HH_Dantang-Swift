@@ -21,6 +21,7 @@ class HHDanTangCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //重写init方法
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -56,7 +57,7 @@ class HHDanTangCell: UITableViewCell {
         }
     }
     
-    lazy var imgView: UIImageView = {
+    private lazy var imgView: UIImageView = {
         let imgV = UIImageView()
         imgV.layer.cornerRadius = 6
         imgV.layer.masksToBounds = true
@@ -64,7 +65,7 @@ class HHDanTangCell: UITableViewCell {
         return imgV
     }()
     
-    lazy var titleLabel:UILabel = {
+    private lazy var titleLabel:UILabel = {
         let label = UILabel()
         label.textColor = UIColor.whiteColor()
         return label

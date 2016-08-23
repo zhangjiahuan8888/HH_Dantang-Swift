@@ -39,6 +39,13 @@ static CGFloat const kTopBarHeight = 60.;
 static CGFloat const kBottomBarHeight = 60.;
 static CGFloat const kTabTitleViewHeight = 45.;
  */
+
+/// 间距
+let kMargin: CGFloat = 10.0
+/// 我的界面头部图像的高度
+let kYMMineHeaderImageHeight: CGFloat = 200
+
+
 let kGoTopNotificationName = "goTop"
 let kLeaveTopNotificationName = "leaveTop"
 let kBottomBarHeight = 60

@@ -78,16 +78,12 @@ extension HHProductDetailViewController:UITableViewDataSource,UITableViewDelegat
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         
         if indexPath.section == 0 {
-//            let textlabel = UILabel(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 164))
-//            textlabel.text = "价格区";
-//            textlabel.backgroundColor = UIColor.cyanColor()
-//            textlabel.textAlignment = NSTextAlignment.Center
-//            cell?.contentView.addSubview(textlabel)
+
             let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! HHProductDetailTopCell
             cell.product = self.product
             return cell
         }else  {
-            //CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomBarHeight-64);
+            
             let picAndCommentView = HHPicDetailAndCommentView(frame: CGRectMake(0, 0, KSCREENWIDTH, KSCREENHEIGHT - CGFloat(kBottomBarHeight) ))
             picAndCommentView.product = self.product
             cell?.contentView.addSubview(picAndCommentView)

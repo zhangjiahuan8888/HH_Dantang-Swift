@@ -10,9 +10,10 @@ import UIKit
 
 class HHProductDetailTopCell: UITableViewCell {
 
+    var bannerView : HHScrollView?
     var product: HHProductModel? {
         didSet {
-
+            bannerView!.setDataSource(product!.image_urls)
             titleLabel.text = product?.name
             priceLabel.text = "¥\(product!.price! as String)"
             describeLabel.text = product?.describe
@@ -30,42 +31,32 @@ class HHProductDetailTopCell: UITableViewCell {
 
     private func setupUI(){
         self.backgroundColor = UIColor.whiteColor()
-        contentView.addSubview(imgView)
-        imgView.snp_makeConstraints { (make) in
-            make.left.equalTo(contentView)
-            make.right.equalTo(contentView)
-            make.top.equalTo(contentView)
-            make.height.equalTo(300)
-        }
+        
+        bannerView = HHScrollView(frame: CGRectMake(0, 0, KSCREENWIDTH, 300))
+        bannerView!.backgroundColor = UIColor.cyanColor()
+        contentView.addSubview(bannerView!)
         
         contentView.addSubview(titleLabel)
         titleLabel.snp_makeConstraints { (make) in
-            make.left.equalTo(imgView).offset(15)
-            make.right.equalTo(imgView).offset(-15)
-            make.top.equalTo(imgView.snp_bottom).offset(10)
+            make.left.equalTo(self).offset(15)
+            make.right.equalTo(self).offset(-15)
+            make.top.equalTo(bannerView!.snp_bottom).offset(10)
         }
         
         contentView.addSubview(priceLabel)
         priceLabel.snp_makeConstraints { (make) in
-            make.left.equalTo(imgView).offset(15)
-            make.right.equalTo(imgView).offset(-15)
+            make.left.equalTo(self).offset(15)
+            make.right.equalTo(self).offset(-15)
             make.top.equalTo(titleLabel.snp_bottom).offset(10)
         }
         
         contentView.addSubview(describeLabel)
         describeLabel.snp_makeConstraints { (make) in
-            make.left.equalTo(imgView).offset(15)
-            make.right.equalTo(imgView).offset(-15)
+            make.left.equalTo(self).offset(15)
+            make.right.equalTo(self).offset(-15)
             make.top.equalTo(priceLabel.snp_bottom).offset(10)
         }
     }
-    
-    private lazy var imgView: UIImageView = {
-        let imgV = UIImageView()
-        imgV.backgroundColor = UIColor.redColor()
-        imgV.userInteractionEnabled = true
-        return imgV
-    }()
     
     private lazy var titleLabel:UILabel = {
         let label = UILabel()

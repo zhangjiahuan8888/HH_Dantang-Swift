@@ -10,13 +10,22 @@ import UIKit
 
 class HHPicDetailAndCommentView: UIView {
 
+    var comments = [HHProductCommentModel]()
     var product: HHProductModel? {
         didSet {
 
-            let url = NSURL(string: (product?.url)!)
-            let request = NSURLRequest(URL: url!)
-            webView.loadRequest(request)
-
+            weak var weakSelf = self
+            //获取单品详情webview数据
+            HHNetWorkTool.shareNetworkTool.loadProductDetailData((product?.id)!) { (productDetail) in
+                weakSelf?.webView.loadHTMLString(productDetail.detail_html!, baseURL: nil)
+            }
+            
+            //获取评论数据
+            HHNetWorkTool.shareNetworkTool.loadProductDetailCommmentData((product?.id)!) { (comments) in
+                weakSelf?.comments = comments
+                weakSelf?.tabContentView.reloadData()
+            }
+            
         }
     }
 
@@ -69,8 +78,9 @@ class HHPicDetailAndCommentView: UIView {
         tabContentView.dataSource = self
         tabContentView.delegate = self
         tabContentView.hidden = true
+        tabContentView.rowHeight = 60
         self.addSubview(tabContentView)
-        tabContentView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tabContentView.registerClass(HHCommentCell.self, forCellReuseIdentifier: "cell")
         
         //图文详情
         webView = UIWebView(frame: CGRectMake(0, CGRectGetMaxY(tabTitleView.frame), KSCREENWIDTH, CGRectGetHeight(self.frame) - CGRectGetHeight(tabTitleView.frame)))
@@ -78,8 +88,6 @@ class HHPicDetailAndCommentView: UIView {
         webView.backgroundColor = UIColor.whiteColor()
         self.addSubview(webView)
         
-        
-
         
     }
     
@@ -115,13 +123,13 @@ class HHPicDetailAndCommentView: UIView {
 extension HHPicDetailAndCommentView:UITableViewDelegate,UITableViewDataSource{
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return comments.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        cell?.textLabel?.text = "评价"
-        return cell!
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! HHCommentCell
+        cell.comment = comments[indexPath.row]
+        return cell
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
