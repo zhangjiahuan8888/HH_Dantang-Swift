@@ -6,4 +6,4 @@
 ![gif](https://github.com/zhangjiahuan8888/HH_Dantang-Swift-/blob/master/HH_Dantang(Swift)/首页gif.gif)
 
 ####单品页
-![gif](https://github.com/zhangjiahuan8888/HH_Dantang-Swift-/blob/master/HH_Dantang(Swift)/详情gif.gif)
+![gif](https://github.com/zhangjiahuan8888/HH_Dantang-Swift-/blob/master/单品gif.gif)
